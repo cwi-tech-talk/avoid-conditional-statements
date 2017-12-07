@@ -14,7 +14,7 @@
  * returns [string] nome do jogo
  */
 
-function recomendarJogo(interesse) {
+module.exports = function recomendarJogo(interesse) {
 
     if (interesse === null) {
         return null;

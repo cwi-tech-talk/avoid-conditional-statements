@@ -1,7 +1,7 @@
 let hashcode = obj => JSON.stringify(obj);
 let regrasRecomendacoes = new Map([
     [hashcode({ genero: 'corrida' }), 'Top Gear'],
-    [hashcode({ genero: 'corrida', plataforma: 'xbox' }), 'Top Gear'],
+    [hashcode({ genero: 'corrida', plataforma: 'xbox' }), 'Forza Motorsport'],
     [hashcode({ genero: 'estratégia' }), 'Tactics Ogre'],
     [hashcode({ experiencia: 'casual' }), 'Candy Crush'],
     [hashcode({ plataforma: 'pc' }), 'Team Fortress'],
@@ -9,7 +9,7 @@ let regrasRecomendacoes = new Map([
     [hashcode({ experiencia: 'hardcore', plataforma: 'pc', ambiente: 'medieval' }), 'Dark Souls'],
     [hashcode({ ambiente: 'fantasia' }), 'Chrono Trigger'],
     [hashcode({ ambiente: 'fantasia', experiencia: 'hardcore', plataforma: 'ps' }), 'Kingdom Hearts'],
-    [hashcode({ ambiente: 'fantasia', experiencia: 'hardcore', genero: 'estrategia' }), 'Final Fantasy Tacatics']
+    [hashcode({ ambiente: 'fantasia', experiencia: 'hardcore', genero: 'estrategia' }), 'Final Fantasy Tactics']
 ]);
 
 /**
@@ -28,7 +28,7 @@ let regrasRecomendacoes = new Map([
  * returns [string] nome do jogo
  */
 
-function recomendarJogo(interesse) {
+module.exports = function recomendarJogo(interesse) {
 
     return regrasRecomendacoes.get(hashcode(interesse));
 
