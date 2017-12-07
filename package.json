@@ -1,0 +1,14 @@
+{
+  "name": "avoid-conditional-statements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "coop-does.js",
+  "scripts": {
+    "test": "node test/recomendacao-coop"
+  },
+  "author": "robsonrosa",
+  "license": "ISC",
+  "devDependencies": {
+    "tap": "^11.0.0"
+  }
+}
