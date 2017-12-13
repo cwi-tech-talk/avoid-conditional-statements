@@ -1,9 +1,6 @@
 let t = require('tap');
-let es6 = require('../src/recomendacao-es6');
-let coop = require('../src/recomendacao-coop');
-let expected = require('../src/recomendacao-expected');
 
-function test(target, id) {
+module.exports = function test(target, id) {
     
     console.log(`### ${id} ###`);
     console.log(`------------------`);
@@ -19,10 +16,9 @@ function test(target, id) {
     t.equal(target({ ambiente: 'fantasia', experiencia: 'hardcore', plataforma: 'ps' }), 'Kingdom Hearts', 'Kingdom Hearts > ambiente fantasia + experiência hardcore + plataforma ps');
     t.equal(target({ ambiente: 'fantasia', experiencia: 'hardcore', genero: 'estrategia' }), 'Final Fantasy Tactics', 'Final Fantasy Tactics > gênero estrategia + experiência hardcore + ambiente fantasia');
   
-    console.log(``);
+    t.equal(target(null), undefined, 'undefined > Interesses não informados');
+    t.equal(target({ genero: 'mmorpg' }), undefined, 'undefined > Regra não atendida (MMORPG)');
+
+    console.log('');
     
 }
-
-test(es6, 'es6');
-test(coop, 'coop');
-test(expected, 'expected');

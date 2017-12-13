@@ -4,7 +4,10 @@
   "description": "",
   "main": "coop-does.js",
   "scripts": {
-    "test": "node test/recomendacao"
+    "test": "node test/recomendacao-coop",
+    "tcoop": "node test/recomendacao-coop",
+    "tes6": "node test/recomendacao-es6",
+    "texpected": "node test/recomendacao-expected"
   },
   "author": "robsonrosa",
   "license": "ISC",

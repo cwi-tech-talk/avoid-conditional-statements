@@ -16,8 +16,8 @@
 
 module.exports = function recomendarJogo(interesse) {
 
-    if (interesse === null) {
-        return null;
+    if (!interesse) {
+        return undefined;
     }
 
     if (interesse.genero === 'corrida') {
@@ -27,6 +27,10 @@ module.exports = function recomendarJogo(interesse) {
         }
 
         return 'Top Gear';
+    }
+
+    if (interesse.experiencia === 'hardcore' && interesse.plataforma === 'pc' && interesse.ambiente === 'medieval') {
+        return 'Dark Souls';
     }
 
     if (interesse.genero === 'estratégia') {
@@ -45,10 +49,6 @@ module.exports = function recomendarJogo(interesse) {
         return 'The Lord Of The Rings';
     }
 
-    if (interesse.experiencia === 'hardcore' && interesse.plataforma === 'pc' && interesse.ambiente === 'medieval') {
-        return 'Dark Souls';
-    }
-
     if (interesse.ambiente === 'fantasia') {
         if (interesse.experiencia === 'hardcore' && interesse.plataforma === 'ps') {
             return 'Kingdom Hearts';
@@ -61,5 +61,4 @@ module.exports = function recomendarJogo(interesse) {
         return 'Chrono Trigger';
     }
 
-    return null;
  }
