@@ -7,7 +7,8 @@
     "test": "node test/recomendacao-coop",
     "tcoop": "node test/recomendacao-coop",
     "tes6": "node test/recomendacao-es6",
-    "texpected": "node test/recomendacao-expected"
+    "texpected": "node test/recomendacao-expected",
+    "tstrategy": "node test/recomendacao-strategy"
   },
   "author": "robsonrosa",
   "license": "ISC",
